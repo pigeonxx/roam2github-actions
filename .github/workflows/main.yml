@@ -6,13 +6,13 @@ on:
       - main
   schedule:
       # Here you can change how often your backup runs. See https://crontab.guru/examples.html
-      - cron: "0 * * * *"
+      - cron: "every 2 minutes"
 
 jobs:
   backup:
     runs-on: ubuntu-latest
     name: Backup
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
         with:
